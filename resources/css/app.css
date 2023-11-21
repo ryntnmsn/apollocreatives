@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background-image: radial-gradient(circle, #181f34, #161d31, #131b2e, #111a2c, #0f1829, #0e1728, #0c1526, #0b1425, #0a1324, #091324, #081223, #071123);    
+    color:rgb(226 232 240)
+}

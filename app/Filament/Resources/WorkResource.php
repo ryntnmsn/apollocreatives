@@ -15,6 +15,8 @@ use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -23,7 +25,7 @@ class WorkResource extends Resource
 {
     protected static ?string $model = Work::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-briefcase';
 
     protected static ?string $navigationGroup = 'Works';
 
@@ -39,13 +41,10 @@ class WorkResource extends Resource
                                     ->required(),
                                 MarkdownEditor::make('description'),
                                 Toggle::make('is_visible')
-                                    ->label('status')
+                                    ->label('Status')
                                     ->helperText('Work visibility status'),
                                 FileUpload::make('image')
                                     ->image(),
-                                FileUpload::make('images')
-                                    ->image()
-                                    ->multiple()
                             ])
                     ])
             ]);
@@ -55,7 +54,10 @@ class WorkResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                IconColumn::make('is_visible')
+                    ->label('Status')
+                    ->boolean()
             ])
             ->filters([
                 //
