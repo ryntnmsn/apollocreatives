@@ -7,6 +7,35 @@ html, body {
     padding:0;
     font-family: 'Poppins', sans-serif;
     height: 100vh;
-    background-image: radial-gradient(circle, #181f34, #161d31, #131b2e, #111a2c, #0f1829, #0e1728, #0c1526, #0b1425, #0a1324, #091324, #081223, #071123);    
-    color:rgb(226 232 240)
+    background-image: radial-gradient(circle, #222a42, #1e263d, #192237, #151e32, #111a2d, #0f182a, #0d1628, #0b1425, #0a1324, #091324, #081223, #071123);
+    color:rgb(226 232 240);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size:16px
+}
+
+
+.splide .is-active {
+    
+}
+
+.splide .splide__arrow {
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    transform: none;
+    border-radius: unset;
+    width: 50px;
+    opacity: .9;
+    svg {
+        filter: invert(1);
+        width: 24px;
+        height: 24px;
+    }
+}
+.splide__arrow.splide__arrow--prev {
+    left: 0;
+}
+.splide__arrow.splide__arrow--next {
+    right: 0;
 }

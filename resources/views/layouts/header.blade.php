@@ -1,6 +1,6 @@
 
 <nav class="border-b border-slate-800">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6 px-4">
       <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
           <span class="self-center text-2xl whitespace-nowrap">Logo</span>
       </a>
@@ -13,19 +13,19 @@
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
           <li>
-            <a href="#" class="block py-2 px-3 text-white rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 rounded md:border-0 md:p-0">About</a>
+            <a href="{{ route('home.index') }}" class="block py-2 px-3 text-white rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
           </li>
           <li>
             <a href="#" class="block py-2 px-3 rounded md:border-0 md:p-0">Services</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 rounded md:border-0 md:p-0">Pricing</a>
+            <a href="{{ route('works.index') }}" class="block py-2 px-3 rounded md:border-0 md:p-0">Works</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 rounded md:border-0 md:p-0">Contact</a>
+            <a href="#" class="block py-2 px-3 rounded md:border-0 md:p-0">About us</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 rounded md:border-0 md:p-0">Partnership</a>
           </li>
         </ul>
       </div>
