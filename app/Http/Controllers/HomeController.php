@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Company;
 use App\Models\Faq;
 use App\Models\Service;
+use App\Models\Team;
 use App\Models\Testimonial;
 use App\Models\Work;
 use Illuminate\Http\Request;
@@ -56,7 +57,10 @@ class HomeController extends Controller
     }
 
     public function about() {
-        return view('about');
+        $members = Team::where('is_visible', '1');
+        return view('about', [
+            'members' => $members->get()
+        ]);
     }
     
     public function plans() {

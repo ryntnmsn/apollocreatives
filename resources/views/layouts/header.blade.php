@@ -10,7 +10,7 @@
           </svg>
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+        <ul class="font-medium flex items-center flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
           <li>
             <a href="{{ route('home.index') }}" class="{{ request()->is('/') ? 'underline decoration-4 underline-offset-8 decoration-yellow-300' : '' }} text-slate-200 block py-2 px-3 rounded md:bg-transparent md:p-0 hover:underline decoration-4 underline-offset-4 decoration-yellow-300" aria-current="page">Home</a>
           </li>
@@ -24,7 +24,17 @@
             <a href="{{ route('about.index') }}" class="{{ request()->is('about-us') ? 'underline decoration-4 underline-offset-8 decoration-yellow-300' : '' }} text-slate-200 block py-2 px-3 rounded md:bg-transparent md:p-0 hover:underline decoration-4 underline-offset-4 decoration-yellow-300">About us</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 rounded md:border-0 md:p-0 hover:underline decoration-4 underline-offset-4 decoration-yellow-300">Partnership</a>
+            <a href="#" class="py-1 space-x-1 items-center px-3 bg-yellow-300 hover:bg-yellow-200 rounded-full text-slate-900 flex">
+              <span>
+                Partnership
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                  <path fill-rule="evenodd" d="M4.606 12.97a.75.75 0 01-.134 1.051 2.494 2.494 0 00-.93 2.437 2.494 2.494 0 002.437-.93.75.75 0 111.186.918 3.995 3.995 0 01-4.482 1.332.75.75 0 01-.461-.461 3.994 3.994 0 011.332-4.482.75.75 0 011.052.134z" clip-rule="evenodd" />
+                  <path fill-rule="evenodd" d="M5.752 12A13.07 13.07 0 008 14.248v4.002c0 .414.336.75.75.75a5 5 0 004.797-6.414 12.984 12.984 0 005.45-10.848.75.75 0 00-.735-.735 12.984 12.984 0 00-10.849 5.45A5 5 0 001 11.25c.001.414.337.75.751.75h4.002zM13 9a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+              </span>
+            </a>
           </li>
         </ul>
       </div>

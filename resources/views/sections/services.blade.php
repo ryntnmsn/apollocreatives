@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <x-paragraph class="mb-5 group-hover:text-slate-900 group-hover:font-medium">{{ $service->short_description }}</x-paragraph>
-                    <x-button>Learn more</x-button>
+                    <x-button class="group-hover:bg-slate-900 group-hover:text-yellow-300">Learn more</x-button>
                 </a>
             </div>      
         @endforeach

@@ -5,7 +5,7 @@
     <x-page-title class="text-5xl">Services</x-page-title>
 @endsection
 
-@section('contents')<div class="w-full pb-56">
+@section('contents')<div class="w-full pb-20">
     <div class="mb-10 flex">
         <div class="flex-1">
             <x-title class="text-4xl underline decoration-yellow-300 underline-offset-[16px] decoration-8">Pick a mission</x-title>
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <x-paragraph class="mb-5 group-hover:text-slate-900 group-hover:font-medium">{{ $service->short_description }}</x-paragraph>
-                    <x-button>Learn more</x-button>
+                    <x-button class="group-hover:bg-slate-900 group-hover:text-yellow-300">Learn more</x-button>
                 </a>
             </div>      
         @endforeach

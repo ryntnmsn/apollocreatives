@@ -47,6 +47,7 @@
                             <li>Works</li>
                             <li>About us</li>
                             <li>Partnership</li>
+                            <li>Pricing</li>
                         </ul>
                     </div>
                 </div>

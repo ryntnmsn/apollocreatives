@@ -6,7 +6,9 @@
 @endsection
 
 @section('contents')
-    <div>
-        
+    <div class="flex md:flex-row flex-col">
+            @include('plans.starter')
+            @include('plans.standard')
+            @include('plans.enterprise')
     </div>
 @endsection
