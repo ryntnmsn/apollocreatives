@@ -1,1 +1,1 @@
-<h1 {!! $attributes->merge(['class' => 'font-bold text-slate-200']) !!}>{{ $slot }}</h1>
+<h1 {!! $attributes->merge(['class' => 'font-extrabold']) !!}>{{ $slot }}</h1>

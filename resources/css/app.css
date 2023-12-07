@@ -5,14 +5,58 @@
 html, body {
     margin:0;
     padding:0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     height: 100vh;
     background-image: radial-gradient(circle, #222a42, #1e263d, #192237, #151e32, #111a2d, #0f182a, #0d1628, #0b1425, #0a1324, #091324, #081223, #071123);
     color:rgb(226 232 240);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-size:16px
+    font-size:18px
 }
+
+.astronaut:after {
+    animation:shadowScale 5s ease infinite;
+    background: rgb(15, 15, 29, .3);
+    border-radius: 50%;
+    content: "";
+    width:12rem;
+    height: 3rem;
+    display: block;
+    position: absolute;
+}
+
+.astronaut {
+    height: 100%;
+    animation: imageMove 5s ease infinite;
+}
+
+@keyframes shadowScale {
+    0% {
+      transform: scale(.5);
+    }
+  
+    50% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(.5);
+    }
+  }
+
+@keyframes imageMove {
+    0% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
 
 
 .splide .is-active {

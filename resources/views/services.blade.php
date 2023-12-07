@@ -1,4 +1,11 @@
-<div class="w-full pb-56">
+@extends('layouts.app')
+@section('title', 'Apollo Creatives PH | Works')
+
+@section('pageTitle')
+    <x-page-title class="text-5xl">Services</x-page-title>
+@endsection
+
+@section('contents')<div class="w-full pb-56">
     <div class="mb-10 flex">
         <div class="flex-1">
             <x-title class="text-4xl underline decoration-yellow-300 underline-offset-[16px] decoration-8">Pick a mission</x-title>
@@ -18,10 +25,9 @@
             </div>
         </div>
     </div>
-
     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         @foreach ($services as $service)
-            <div class="column card p-6 border group border-slate-200/[.10] hover:-translate-y-2 hover:shadow-2xl bg-slate-200/[.03] rounded-2xl hover:bg-amber-400 duration-200 ease-in-out cursor-pointer">
+            <div class="p-6 border group border-slate-200/[.10] hover:-translate-y-2 hover:shadow-2xl bg-slate-200/[.03] rounded-2xl hover:bg-amber-400 duration-300 ease-in-out cursor-pointer">
                 <a href="{{ route('services.show', $service->slug) }}">
                     <div class="flex space-x-4 mb-4 w-full">
                         <div class="flex-none">
@@ -39,3 +45,4 @@
         @endforeach
     </div>
 </div>
+@endsection

@@ -16,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home.index');
     Route::get('works', 'works')->name('works.index');
+    Route::get('works/{slug}', 'works_show')->name('works.show');
+    Route::get('services', 'services')->name('services.index');
+    Route::get('services/{slug}', 'services_show')->name('services.show');
+    Route::get('about-us', 'about')->name('about.index');
+    
 });

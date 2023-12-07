@@ -2,6 +2,7 @@
 @section('title', 'Apollo Creatives PH')
 
 @section('contents')
+    @include('sections.story')
     @include('sections.services')
     @include('sections.testimonials')
     @include('sections.faq')
