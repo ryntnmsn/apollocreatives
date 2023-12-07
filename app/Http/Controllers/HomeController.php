@@ -12,7 +12,6 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
    
-
     public function index() {
         $services = Service::where('is_visible', '1');
         $testimonials = Testimonial::where('is_visible', '1');
@@ -32,9 +31,11 @@ class HomeController extends Controller
     }
 
     public function works_show($slug) {
+        $companies = Company::where('is_visible', '1')->limit(4);
         $company = Company::with('works')->where('slug', $slug)->first();
         return view('works_show', [
-            'company' => $company
+            'company' => $company,
+            'companies' => $companies->get()
         ]);
     }
 
@@ -46,13 +47,19 @@ class HomeController extends Controller
     }
 
     public function services_show($slug) {
+        $services = Service::where('is_visible', '1');
         $service = Service::where('slug', $slug)->first();
         return view('services_show', [
-            'service' => $service
+            'service' => $service,
+            'services' => $services->get(),
         ]);
     }
 
     public function about() {
         return view('about');
+    }
+    
+    public function plans() {
+        return view('plans');
     }
 }

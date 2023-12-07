@@ -20,5 +20,5 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('services', 'services')->name('services.index');
     Route::get('services/{slug}', 'services_show')->name('services.show');
     Route::get('about-us', 'about')->name('about.index');
-    
+    Route::get('plans', 'plans')->name('plans.index');
 });

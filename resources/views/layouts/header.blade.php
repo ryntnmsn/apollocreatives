@@ -12,19 +12,19 @@
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
           <li>
-            <a href="{{ route('home.index') }}" class="{{ request()->is('/') ? 'underline decoration-4 underline-offset-8 decoration-yellow-300' : '' }} text-slate-200 block py-2 px-3 rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
+            <a href="{{ route('home.index') }}" class="{{ request()->is('/') ? 'underline decoration-4 underline-offset-8 decoration-yellow-300' : '' }} text-slate-200 block py-2 px-3 rounded md:bg-transparent md:p-0 hover:underline decoration-4 underline-offset-4 decoration-yellow-300" aria-current="page">Home</a>
           </li>
           <li>
-            <a href="{{ route('services.index') }}" class="{{ request()->is('services') ? 'underline decoration-4 underline-offset-8 decoration-yellow-300' : '' }} text-slate-200 block py-2 px-3 rounded md:bg-transparent md:p-0">Services</a>
+            <a href="{{ route('services.index') }}" class="{{ request()->is('services*') ? 'underline decoration-4 underline-offset-8 decoration-yellow-300' : '' }} text-slate-200 block py-2 px-3 rounded md:bg-transparent md:p-0 hover:underline decoration-4 underline-offset-4 decoration-yellow-300">Services</a>
           </li>
           <li>
-            <a href="{{ route('works.index') }}" class="{{ request()->is('works') ? 'underline decoration-4 underline-offset-8 decoration-yellow-300' : '' }} text-slate-200 block py-2 px-3 rounded md:bg-transparent md:p-0">Works</a>
+            <a href="{{ route('works.index') }}" class="{{ request()->is('works*') ? 'underline decoration-4 underline-offset-8 decoration-yellow-300' : '' }} text-slate-200 block py-2 px-3 rounded md:bg-transparent md:p-0 hover:underline decoration-4 underline-offset-4 decoration-yellow-300">Works</a>
           </li>
           <li>
-            <a href="{{ route('about.index') }}" class="{{ request()->is('about-us') ? 'underline decoration-4 underline-offset-8 decoration-yellow-300' : '' }} text-slate-200 block py-2 px-3 rounded md:bg-transparent md:p-0">About us</a>
+            <a href="{{ route('about.index') }}" class="{{ request()->is('about-us') ? 'underline decoration-4 underline-offset-8 decoration-yellow-300' : '' }} text-slate-200 block py-2 px-3 rounded md:bg-transparent md:p-0 hover:underline decoration-4 underline-offset-4 decoration-yellow-300">About us</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 rounded md:border-0 md:p-0">Partnership</a>
+            <a href="#" class="block py-2 px-3 rounded md:border-0 md:p-0 hover:underline decoration-4 underline-offset-4 decoration-yellow-300">Partnership</a>
           </li>
         </ul>
       </div>

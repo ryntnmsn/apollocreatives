@@ -83,3 +83,20 @@ html, body {
 .splide__arrow.splide__arrow--next {
     right: 0;
 }
+
+
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;   /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background:#ffffff;        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(250 202 21);      /* roundness of the scroll thumb */
+  border: 3px solid rgb(250 202 21);  /* creates padding around scroll thumb */
+}
+
