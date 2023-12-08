@@ -1,8 +1,9 @@
+@if($testimonials->count() != null)
 <div class="w-full pb-56">
     <div class="text-center mb-10">
         <x-title class="text-4xl underline decoration-yellow-300 underline-offset-[16px] decoration-8">Testimonials</x-title>
     </div>
-   
+
         <div class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
@@ -13,7 +14,7 @@
                                 <img src="{{ asset('storage/' . $testimonial->image) }}" class="w-32 h-32 duration-200 ease-in-out rounded-full p-3 border border-slate-200/[.10] bg-slate-900">
                             </div>
                             <x-title class="text-lg group-hover:text-slate-900">{{ $testimonial->name }}</x-title>
-                            <x-paragraph class="pb-4 group-hover:text-slate-900">{{ $testimonial->company }}, {{ $testimonial->position }}</x-paragraph>
+                            <x-paragraph class="pb-4 group-hover:text-slate-900">{{ $testimonial->company }} {{ $testimonial->position }}</x-paragraph>
 
                             <div>
                                 <div class="flex items-center mb-4 text-yellow-300 group-hover:text-yellow-500">
@@ -48,5 +49,6 @@
                 </ul>
             </div>
         </div>
-      
 </div>
+@else
+@endif

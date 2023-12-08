@@ -1,3 +1,4 @@
+@if($services->count() != null)
 <div class="w-full pb-56">
     <div class="mb-10 flex">
         <div class="flex-1">
@@ -35,7 +36,9 @@
                     <x-paragraph class="mb-5 group-hover:text-slate-900 group-hover:font-medium">{{ $service->short_description }}</x-paragraph>
                     <x-button class="group-hover:bg-slate-900 group-hover:text-yellow-300">Learn more</x-button>
                 </a>
-            </div>      
+            </div>
         @endforeach
     </div>
 </div>
+@else
+@endif

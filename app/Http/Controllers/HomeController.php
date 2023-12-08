@@ -12,9 +12,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-   
+
     public function index() {
-        $services = Service::where('is_visible', '1');
+        $services = Service::where('is_visible', '1')->limit(6);
         $testimonials = Testimonial::where('is_visible', '1');
         $faqs = Faq::where('is_visible', '1');
         return view('index', [
@@ -62,7 +62,7 @@ class HomeController extends Controller
             'members' => $members->get()
         ]);
     }
-    
+
     public function plans() {
         return view('plans');
     }
