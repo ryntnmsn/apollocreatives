@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Faq;
+use App\Models\Service;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+
+        //FAQ's
+        view()->share('faqs', 
+        Faq::where('is_visible', '1')->get());
+
+        //Services
+        view()->share('servicesList',
+        Service::where('is_visible', '1')->get());
     }
 }

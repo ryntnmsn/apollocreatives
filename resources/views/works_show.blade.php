@@ -12,8 +12,8 @@
         </div>
         <div class="flex flex-col mb-40">
             @forelse ($company->works as $work)
-                <div class="py-16 flex items-center space-x-20 border-b-2 border-slate-200/[.08]">
-                    <div class="flex-1">
+                <div class="py-16 flex md:flex-row flex-col items-center space-x-0 md:space-x-20 border-b-2 border-slate-200/[.08]">
+                    <div class="flex-1 mb-10">
                         <x-title class="text-3xl pb-10 underline decoration-yellow-300 underline-offset-8 decoration-8">{{ $work->name }}</x-title>
                         <x-paragraph>{{ $work->description }}</x-paragraph>
                     </div>

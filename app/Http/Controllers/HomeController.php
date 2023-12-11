@@ -14,13 +14,10 @@ class HomeController extends Controller
 {
 
     public function index() {
-        $services = Service::where('is_visible', '1')->limit(6);
+     
         $testimonials = Testimonial::where('is_visible', '1');
-        $faqs = Faq::where('is_visible', '1');
         return view('index', [
-            'services' => $services->get(),
             'testimonials' => $testimonials->get(),
-            'faqs' => $faqs->get()
         ]);
     }
 
@@ -41,18 +38,13 @@ class HomeController extends Controller
     }
 
     public function services() {
-        $services = Service::where('is_visible', '1');
-        return view('services', [
-            'services' => $services->get(),
-        ]);
+        return view('services');
     }
 
     public function services_show($slug) {
-        $services = Service::where('is_visible', '1');
-        $service = Service::where('slug', $slug)->first();
+        $service = Service::where('slug', $slug)->with('subservices')->first();
         return view('services_show', [
             'service' => $service,
-            'services' => $services->get(),
         ]);
     }
 

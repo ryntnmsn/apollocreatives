@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        @foreach ($services as $service)
+        @foreach ($servicesList as $service)
             <div class="p-6 border group border-slate-200/[.10] hover:-translate-y-2 hover:shadow-2xl bg-slate-200/[.03] rounded-2xl hover:bg-amber-400 duration-300 ease-in-out cursor-pointer">
                 <a href="{{ route('services.show', $service->slug) }}">
                     <div class="flex space-x-4 mb-4 w-full">
@@ -38,7 +38,7 @@
                             <x-paragraph class="font-bold group-hover:text-slate-900">Service</x-paragraph>
                         </div>
                     </div>
-                    <x-paragraph class="mb-5 group-hover:text-slate-900 group-hover:font-medium">{{ $service->short_description }}</x-paragraph>
+                    <x-paragraph class="mb-5 group-hover:text-slate-900 group-hover:font-medium">{!! Str::words($service->short_description, 50 ,' . . .') !!}</x-paragraph>
                     <x-button class="group-hover:bg-slate-900 group-hover:text-yellow-300">Learn more</x-button>
                 </a>
             </div>      

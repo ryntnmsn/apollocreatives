@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('sub_services', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('service_id')
+                ->constrained('services')
+                ->cascadeOnDelete();
+            $table->string('name');
+            $table->longText('description');
+            $table->boolean('is_visible')
+                ->default(false);
             $table->timestamps();
         });
     }

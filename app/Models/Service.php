@@ -12,4 +12,8 @@ class Service extends Model
     protected $fillable = [
         'name', 'slug', 'description', 'short_description', 'is_visible', 'image', 'header_image'
     ];
+
+    public function subservices() {
+        return $this->hasMany(SubService::class);
+    }
 }
