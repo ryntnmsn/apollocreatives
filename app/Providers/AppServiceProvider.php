@@ -5,7 +5,7 @@ namespace App\Providers;
 use App\Models\Faq;
 use App\Models\Service;
 use Illuminate\Support\ServiceProvider;
-use App\Providers\Schema;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
