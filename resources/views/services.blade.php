@@ -6,26 +6,27 @@
 @endsection
 
 @section('contents')<div class="w-full pb-20">
-    <div class="mb-10 flex">
-        <div class="flex-1">
-            <x-title class="text-4xl underline decoration-yellow-300 underline-offset-[16px] decoration-8">Pick a mission</x-title>
-        </div>
-        <div class="flex-none items-center justify-center text-right">
-            <div class="flex items-end justify-end h-full">
-                <a href="#" class="text-yellow-300 flex space-x-2 hover:text-yellow-200">
-                    <span>
-                        View all
-                    </span>
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                        </svg>
-                    </span>
-                </a>
+    @if($servicesList->count() != null)
+        <div class="mb-10 flex">
+            <div class="flex-1">
+                <x-title class="text-4xl underline decoration-yellow-300 underline-offset-[16px] decoration-8">Pick a mission</x-title>
+            </div>
+            <div class="flex-none items-center justify-center text-right">
+                <div class="flex items-end justify-end h-full">
+                    <a href="#" class="text-yellow-300 flex space-x-2 hover:text-yellow-200">
+                        <span>
+                            View all
+                        </span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    @if($servicesList->count() != null)
+
         <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach ($servicesList as $service)
                 <div class="p-6 border group border-slate-200/[.10] hover:-translate-y-2 hover:shadow-2xl bg-slate-200/[.03] rounded-2xl hover:bg-amber-400 duration-300 ease-in-out cursor-pointer">
@@ -53,9 +54,9 @@
                 </svg>
             </div>
             <div>
-                <x-title class="text-2xl">No works available.</x-title>
+                <x-title class="text-2xl">No services available.</x-title>
             </div>
         </div>
     @endif
-</div>
+
 @endsection
