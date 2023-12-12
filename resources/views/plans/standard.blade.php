@@ -1,13 +1,13 @@
 <div class="flex-1">
     <div class="bg-yellow-300 px-6 pb-10 relative h-full rounded-2xl text-slate-900">
-        <div class="font-bold text-xl absolute top-10 right-10 bg-slate-900 text-yellow-300 rounded-full h-14 w-14 text-center flex items-center justify-center">Hot</div>
+        <div class="font-bold text-xl absolute top-10 right-10 bg-slate-900 text-slate-200 rounded-full h-14 w-14 text-center flex items-center justify-center">Hot</div>
         <div class="py-16">
             <div class="text-center mb-4">
                 Standard
             </div>
             <div>
                 <div class="text-center">
-                    <h1 class="text-6xl font-black text-slate-900">$500<span class="text-3xl">/mo</span></h1>
+                    <h1 class="text-6xl font-black">$500<span class="text-3xl">/mo</span></h1>
                 </div>
             </div>
         </div>
