@@ -24,12 +24,18 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-        //FAQ's
-        view()->share('faqs',
-        Faq::where('is_visible', '1')->get());
 
-        //Services
-        view()->share('servicesList',
-        Service::where('is_visible', '1')->get());
+        if(!app()->runningInConsole()) {
+            //FAQ's
+            view()->share('faqs',
+            Faq::where('is_visible', '1')->get());
+
+            //Services
+            view()->share('servicesList',
+            Service::where('is_visible', '1')->get());
+        }
+
+
+
     }
 }
