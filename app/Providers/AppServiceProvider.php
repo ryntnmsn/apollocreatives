@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
     {
 
         //FAQ's
-        view()->share('faqs', 
+        view()->share('faqs',
         Faq::where('is_visible', '1')->get());
 
         //Services

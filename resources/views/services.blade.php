@@ -41,7 +41,7 @@
                     <x-paragraph class="mb-5 group-hover:text-slate-900 group-hover:font-medium">{!! Str::words($service->short_description, 50 ,' . . .') !!}</x-paragraph>
                     <x-button class="group-hover:bg-slate-900 group-hover:text-yellow-300">Learn more</x-button>
                 </a>
-            </div>      
+            </div>
         @endforeach
     </div>
 </div>
