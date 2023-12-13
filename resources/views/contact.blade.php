@@ -9,12 +9,12 @@
 <div class="mb-56">
     <form action="{{ route('contact.send') }}" method="post">
         @csrf
-        <div class="flex space-x-20">
+        <div class="flex md:flex-row flex-col space-x-0 md:space-x-20">
             <div class="flex-1">
                 <x-title class="space-x-10 text-2xl underline decoration-yellow-300 decoration-8 underline-offset-8 mb-5">Contact Us</x-title>
                 <x-paragraph class="mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam corrupti error doloremque repellendus maiores quae quasi, ad deserunt facere iusto dolor dolorem repudiandae modi nam impedit cum nobis earum labore.</x-paragraph>
-    
-                <div class="mb-10 flex bg-slate-200/[.03] p-5 rounded-lg">
+
+                <div class="mb-10 flex flex-col lg:flex-row lg:space-y-0 space-y-10 bg-slate-100 dark:bg-slate-200/[.03] p-5 rounded-lg">
                     <div class="flex-1">
                         <div class="flex items-center space-x-1">
                             <span>
@@ -55,22 +55,22 @@
                         <x-paragraph>apollocreatives@gmail.com</x-paragraph>
                     </div>
                 </div>
-                <div class="flex flex-col w-full space-y-10 bg-slate-200/[.03] rounded-2xl p-10">
+                <div class="flex flex-col w-full space-y-5 md:space-y-10 bg-slate-100 dark:bg-slate-200/[.03] rounded-2xl p-4 md:p-10">
                     <div>
-                        <label for="name" class="text-slate-400 mb-3 block">Name</label>
-                        <input type="text" id="name" name="name" class="w-full px-3 py-2 rounded-lg bg-slate-200/[.03] border-slate-200/[.05] focus:border-yellow-300 focus:bg-yellow-300 focus:text-slate-900 focus:ring-0">
+                        <label for="name" class="text-slate-500 dark:text-slate-400 mb-3 block">Name</label>
+                        <input type="text" id="name" name="name" class="bg-slate-200 w-full px-3 py-2 rounded-lg dark:bg-slate-200/[.03] border-slate-200/[.05] focus:border-yellow-300 focus:bg-yellow-300 focus:text-slate-900 focus:ring-0">
                     </div>
                     <div>
-                        <label for="email" class="text-slate-400 mb-3 block">Email</label>
-                        <input type="email" id="email" name="email" class="w-full px-3 py-2 rounded-lg bg-slate-200/[.03] border-slate-200/[.05] focus:border-yellow-300 focus:bg-yellow-300 focus:text-slate-900 focus:ring-0">
+                        <label for="email" class="text-slate-500 dark:text-slate-400 mb-3 block">Email</label>
+                        <input type="email" id="email" name="email" class="bg-slate-200 w-full px-3 py-2 rounded-lg dark:bg-slate-200/[.03] border-slate-200/[.05] focus:border-yellow-300 focus:bg-yellow-300 focus:text-slate-900 focus:ring-0">
                     </div>
                     <div>
-                        <label for="subject" class="text-slate-400 mb-3 block">Subject</label>
-                        <input type="text" id="subject" name="subject" class="w-full px-3 py-2 rounded-lg bg-slate-200/[.03] border-slate-200/[.05] focus:border-yellow-300 focus:bg-yellow-300 focus:text-slate-900 focus:ring-0">
+                        <label for="subject" class="text-slate-500 dark:text-slate-400 mb-3 block">Subject</label>
+                        <input type="text" id="subject" name="subject" class="bg-slate-200 w-full px-3 py-2 rounded-lg dark:bg-slate-200/[.03] border-slate-200/[.05] focus:border-yellow-300 focus:bg-yellow-300 focus:text-slate-900 focus:ring-0">
                     </div>
                     <div>
-                        <label for="message" class="text-slate-400 mb-3 block">Message</label>
-                        <textarea id="message" name="message" class="h-40 w-full px-3 py-2 rounded-lg bg-slate-200/[.03] border-slate-200/[.05] focus:border-yellow-300 focus:bg-yellow-300 focus:text-slate-900 focus:ring-0"></textarea>
+                        <label for="message" class="text-slate-500 dark:text-slate-400 mb-3 block">Message</label>
+                        <textarea id="message" name="message" class="bg-slate-200 h-40 w-full px-3 py-2 rounded-lg dark:bg-slate-200/[.03] border-slate-200/[.05] focus:border-yellow-300 focus:bg-yellow-300 focus:text-slate-900 focus:ring-0"></textarea>
                     </div>
                     <div>
                         <x-button>Submit</x-button>
@@ -80,7 +80,7 @@
             <div class="flex-none">
                 <div class="flex justify-center items-center h-full pt-10" style="background-image: url('{{ asset('images/astronaut_bg.png') }}'); background-size:contain; background-repeat:no-repeat; background-position:center">
                     <div class="astronaut">
-                        <img src="{{ asset('images/spaceman_02.png') }}" alt="" class="w-72 md:w-80">
+                        <img src="{{ asset('images/spaceman_02.png') }}" alt="" class="w-60 md:w-60 lg:w-80">
                     </div>
                 </div>
             </div>

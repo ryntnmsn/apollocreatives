@@ -7,11 +7,11 @@ html, body {
     padding:0;
     font-family: 'Lexend Deca', sans-serif;
     height: 100vh;
-    background-image: radial-gradient(circle, #222a42, #1e263d, #192237, #151e32, #111a2d, #0f182a, #0d1628, #0b1425, #0a1324, #091324, #081223, #071123);
+    /* background-image: radial-gradient(circle, #222a42, #1e263d, #192237, #151e32, #111a2d, #0f182a, #0d1628, #0b1425, #0a1324, #091324, #081223, #071123); */
     color:rgb(226 232 240);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-size:18px
+    font-size:16px
 }
 
 .astronaut:after {

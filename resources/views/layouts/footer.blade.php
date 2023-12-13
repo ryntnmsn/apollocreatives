@@ -14,18 +14,19 @@
             </div>
         </div>
     </div>
-    
-    <div class="w-full bg-slate-200/[.03] text-slate-200 pt-40 z-0">
+
+    <div class="w-full bg-slate-900 dark:bg-slate-200/[.03] text-slate-200 pt-40 z-0">
         <div class="max-w-screen-xl w-full mx-auto px-4">
-            <div class="flex mb-20 space-x-10">
-                <div class="flex-1">
-                    <img src="{{ asset('images/apollo-icon.png') }}" alt="" class="w-16 mb-5">
-                    <p class="text-sm mb-5">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque recusandae
-                    </p>
-                    <x-button class="px-[14px] py-[6px]">Read more</x-button>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:flex-row mb-20 space-y-10 md:space-y-0 space-x-0 md:space-x-10">
+                <div class="flex-1 pt-10 md:pt-0">
+                    <div class="flex items-center sm:items-start flex-col justify-center w-full">
+                        <img src="{{ asset('images/apollo-icon.png') }}" alt="" class="w-16 mb-5">
+                        <p class="text-sm mb-5 w-60 text-center sm:text-left">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque recusandae
+                        </p>
+                    </div>
                 </div>
-                <div class="flex-1">
+                <div class="flex-1 text-center sm:text-left">
                     <h5 class="text-lg font-bold mb-5 underline underline-offset-8 decoration-[6px] decoration-yellow-300">Useful Links</h5>
                     <div>
                         <ul class="space-y-4">
@@ -38,7 +39,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="flex-1">
+                <div class="flex-1 text-center sm:text-left">
                     <h5 class="text-lg font-bold mb-5 underline underline-offset-8 decoration-[6px] decoration-yellow-300">Contact us</h5>
                     <div>
                         <ul class="space-y-4">
@@ -51,7 +52,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="flex-1">
+                <div class="flex-1 text-center sm:text-left">
                     <h5 class="text-lg font-bold mb-5 underline underline-offset-8 decoration-[6px] decoration-yellow-300">Social link</h5>
                     <div>
                         <ul class="space-y-4">
@@ -64,7 +65,7 @@
             </div>
         </div>
         <div class="flex bg-slate-200/[.05]">
-            <div class="max-w-screen-xl w-full mx-auto px-4 py-3 flex">
+            <div class="max-w-screen-xl w-full mx-auto px-4 py-3 flex md:flex-row flex-col text-center md:text-left">
                 <x-paragraph class="text-sm text-slate-200/[.30] flex-1">Copyright 2024 © Apollo Creatives PH. All rights reserved.</x-paragraph>
                 <x-paragraph class="text-sm text-slate-200/[.30] flex-none">Terms and Condition</x-paragraph>
             </div>

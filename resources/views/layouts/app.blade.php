@@ -17,7 +17,7 @@
             document.documentElement.classList.remove('dark')
         }
     </script>
-    
+
     <title>@yield('title')</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
 
@@ -48,12 +48,12 @@
     </script>
 
 </head>
-<body>
-    <header>
+<body class="bg-slate-50 dark:bg-slate-900">
+    <header class="fixed top-0 right-0 left-0 z-50">
         @include('layouts.header')
     </header>
     <main>
-        @yield('pageTitle')
+        <div class="pt-[86px]">@yield('pageTitle')</div>
         <div class="max-w-screen-xl w-full mx-auto px-4 pt-20">
             @yield('contents')
         </div>
@@ -98,7 +98,7 @@
             }
         });
     </script>
-    
+
 
 </body>
 </html>
