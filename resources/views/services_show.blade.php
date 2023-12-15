@@ -46,10 +46,10 @@
                 <div class="flex">
                     <div class="flex-1">
                         @forelse ($service->subservices as $subservice)
-                            <div class="mb-10 bg-slate-200/[.03] px-10 py-10 border border-slate-200/[.05] rounded-xl">
+                            <div class="mb-10 bg-slate-100 dark:bg-slate-200/[.03] px-10 py-10 border border-slate-200/[.05] rounded-xl">
                                 <div class="flex items-center space-x-3 mb-2">
                                     <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-yellow-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 bg-yellow-300 dark:bg-transparent text-slate-50 rounded-full p-1 dark:text-yellow-300">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                                         </svg>
                                     </span>

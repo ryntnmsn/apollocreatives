@@ -1,5 +1,5 @@
 <div class="flex-1 my-10">
-            <div class="bg-slate-200/[.03] px-6 pb-10 rounded-r-2xl">
+            <div class="bg-slate-100 dark:bg-slate-200/[.03] px-6 pb-10 rounded-r-2xl text-slate-500 dark:text-slate-200">
                 <div class="py-16">
                     <div class="text-center mb-4">
                         Enterprise
