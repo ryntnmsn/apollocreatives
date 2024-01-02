@@ -3,7 +3,7 @@
         <div class="flex-1 text-left pe-0 md:pe-10">
             <x-title class="text-5xl md:text-6xl mb-5">Our Story</x-title>
             <x-paragraph class="pb-5">
-                Our team of six is centered on innovation, with each member possesses the ability to operate effectively in multiple capacities, bringing with them a wealth of knowledge and unwavering commitment to ensure the delivery of exceptional outcomes.
+                Our team of six is centered on innovation, with each member possesses the ability to operate effectively in multiple capacities, bringing with them a wealth of knowledge and unwavering commitment to ensure the delivery of exceptional outcomes. Our team of six is centered on innovation, with each member possesses the ability to operate effectively in multiple capacities, bringing with them a wealth 
             </x-paragraph>
             <form action="{{ route('about.index') }}" class="{{ request()->is('about-us') ? 'hidden' : '' }}">
                 <x-button type="submit">Read more</x-button>

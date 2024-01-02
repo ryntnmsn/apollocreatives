@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -22,7 +23,19 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
     <script>
         document.addEventListener( 'DOMContentLoaded', function () {
-            new Splide('.splide', {
+            new Splide('#banners', {
+                type: 'loop',
+                autoplay: 'true',
+                perMove: 1,
+                arrows: true,
+                perPage: 1,
+                interval: 5000,
+                pagination: true,
+            }).mount()
+        });
+        
+        document.addEventListener( 'DOMContentLoaded', function () {
+            new Splide( '#splide', {
                 type: 'loop',
                 autoplay: 'true',
                 gap: '1.5rem',
@@ -46,7 +59,6 @@
         });
     </script>
 
-    
 </head>
 <body class="bg-slate-50 dark:bg-slate-900">
     <header class="fixed top-0 right-0 left-0 z-50">
@@ -98,7 +110,6 @@
             }
         });
     </script>
-
 
 </body>
 </html>

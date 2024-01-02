@@ -3,7 +3,7 @@
     <div class="text-center mb-10">
         <x-title class="text-4xl underline decoration-yellow-300 underline-offset-[16px] decoration-8">Testimonials</x-title>
     </div>
-    <div class="splide">
+    <div id="splide" class="splide">
         <div class="splide__track">
             <ul class="splide__list">
             @foreach ($testimonials as $testimonial)
