@@ -3,11 +3,11 @@
         <div class="flex-1 text-left pe-0 md:pe-10">
             <x-title class="text-5xl md:text-6xl mb-5">Our Story</x-title>
             <x-paragraph class="pb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <br><br>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Our team of six is centered on innovation, with each member possesses the ability to operate effectively in multiple capacities, bringing with them a wealth of knowledge and unwavering commitment to ensure the delivery of exceptional outcomes.
             </x-paragraph>
-            <x-button>Read more</x-button>
+            <form action="{{ route('about.index') }}" class="{{ request()->is('about-us') ? 'hidden' : '' }}">
+                <x-button type="submit">Read more</x-button>
+            </form>
         </div>
         <div class="flex-1">
             <div class="flex justify-center items-center h-full" style="background-image: url('{{ asset('images/astronaut_bg.png') }}'); background-size:contain; background-repeat:no-repeat; background-position:center">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\Company;
 use App\Models\Faq;
 use App\Models\Service;
@@ -14,9 +15,10 @@ class HomeController extends Controller
 {
 
     public function index() {
-     
+        $banners = Banner::where('is_visible', '1');
         $testimonials = Testimonial::where('is_visible', '1');
         return view('index', [
+            'banners' => $banners->get(),
             'testimonials' => $testimonials->get(),
         ]);
     }

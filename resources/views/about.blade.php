@@ -15,13 +15,12 @@
                     <div class="flex-1">
                         <x-title class="text-4xl underline decoration-yellow-300 underline-offset-[10px] decoration-[6px] mb-5">Mission</x-title>
                         <x-paragraph>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                        </x-paragraph>
+                            Apollo Inc. is dedicated to meeting the branding needs of organizations through high-quality, functional collaterals and digital services. We devote our expertise, originality, and experience to them in order to assist them in achieving their brand objectives.                        </x-paragraph>
                     </div>
                     <div class="flex-1">
-                        <x-title class="text-4xl underline decoration-yellow-300 underline-offset-[10px] decoration-[6px] mb-5">Vission</x-title>
+                        <x-title class="text-4xl underline decoration-yellow-300 underline-offset-[10px] decoration-[6px] mb-5">Goal</x-title>
                         <x-paragraph>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                            Through our marketing services, we seek to simplify our clients' daily life. Every brand we come across is something we hope to influence.
                         </x-paragraph>
                     </div>
                 </div>
@@ -40,7 +39,7 @@
                 <div class="grid grid-cols-3 gap-5">
                     @foreach ($members as $member)
                         <div class=" pt-16 hover:-translate-y-2 duration-200 ease-in-out">
-                            <div class="group relative w-full border border-slate-200/[.10] hover:shadow-2xl bg-slate-100 dark:bg-slate-200/[.03] rounded-2xl hover:bg-yellow-300 duration-200 ease-in-out px-6 pb-6">
+                            <div class="group cursor-default relative w-full border border-slate-200/[.10] hover:shadow-2xl bg-slate-100 dark:bg-slate-200/[.03] rounded-2xl dark:hover:bg-yellow-300 hover:bg-yellow-300 duration-200 ease-in-out px-6 pb-6">
                                 <div class="w-full -mt-16 flex justify-center pb-6">
                                     <img src="{{ asset('storage/' . $member->image) }}" class="w-32 h-32 duration-200 ease-in-out rounded-full p-3 border border-slate-200 dark:border-slate-200/[.10] bg-slate-50 dark:bg-slate-900">
                                 </div>
@@ -59,10 +58,6 @@
                     @endforeach
                 </div>
             </div>
-
-
-
-
 
         </div>
     </div>

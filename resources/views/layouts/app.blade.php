@@ -17,44 +17,44 @@
             document.documentElement.classList.remove('dark')
         }
     </script>
-
+    
     <title>@yield('title')</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
-
     <script>
         document.addEventListener( 'DOMContentLoaded', function () {
-        new Splide('.splide', {
-            type: 'loop',
-            autoplay: 'true',
-            gap: '1.5rem',
-            perMove: 1,
-            arrows: false,
-            focus: 'center',
-            perPage: 3,
-            interval: 5000,
-            pagination: false,
-            breakpoints: {
-            1440: {
-                perPage: 2,
-                focus: 'none',
-            },
-            768: {
-                perPage: 1,
-                focus: 'none',
-            }
-            }
-        }).mount();
+            new Splide('.splide', {
+                type: 'loop',
+                autoplay: 'true',
+                gap: '1.5rem',
+                perMove: 1,
+                arrows: false,
+                focus: 'center',
+                perPage: 3,
+                interval: 5000,
+                pagination: false,
+                breakpoints: {
+                1440: {
+                    perPage: 2,
+                    focus: 'none',
+                },
+                768: {
+                    perPage: 1,
+                    focus: 'none',
+                }
+                }
+            }).mount()
         });
     </script>
 
+    
 </head>
 <body class="bg-slate-50 dark:bg-slate-900">
     <header class="fixed top-0 right-0 left-0 z-50">
         @include('layouts.header')
     </header>
     <main>
-        <div class="pt-[86px]">@yield('pageTitle')</div>
-        <div class="max-w-screen-xl w-full mx-auto px-4 pt-20">
+        <div class="pt-[91px]">@yield('pageTitle')</div>
+        <div class="max-w-screen-xl w-full mx-auto px-4 {{ request()->is('/') ? 'pt-0' : 'pt-20' }}">
             @yield('contents')
         </div>
     </main>

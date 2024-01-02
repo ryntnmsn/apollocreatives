@@ -2,7 +2,7 @@
     <div class="max-w-screen-xl w-full mx-auto px-4 z-10 relative">
         <div class="flex bg-gradient-to-r from-yellow-300 to-yellow-300 w-full -mb-20 rounded-xl" style="background-image: url('{{ asset('images/yellow-bg.jpg') }}'); background-repeat:no-repeat; background-size:cover">
             <div class="flex-1 p-10">
-                <x-title class="text-4xl text-slate-900 mb-4">
+                <x-title class="text-4xl dark:text-slate-900 text-slate-900 mb-4">
                     Let us do it for you!
                 </x-title>
                 <div class="flex">

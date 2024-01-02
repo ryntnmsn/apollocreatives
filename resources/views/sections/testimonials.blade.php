@@ -42,7 +42,6 @@
                         </div>
                         <x-paragraph class="italic group-hover:text-slate-900">{{ $testimonial->description }}</x-paragraph>
                     </div>
-
                 </li>
             @endforeach
             </ul>
