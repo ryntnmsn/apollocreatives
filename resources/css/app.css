@@ -14,6 +14,15 @@ html, body {
     font-size:16px
 }
 
+.member_bg {
+  background-image: radial-gradient(circle, #222a42, #1e263d, #192237, #151e32, #111a2d, #0f182a, #0d1628, #0b1425, #0a1324, #091324, #081223, #071123);
+  color:rgb(226 232 240);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
 .astronaut:after {
     animation:shadowScale 5s ease infinite;
     background: rgb(15, 15, 29, .3);

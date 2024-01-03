@@ -28,3 +28,8 @@ Route::controller(ContactController::class)->group(function () {
     Route::get('contact-us', 'index')->name('contact.index');
     Route::post('/send', 'send')->name('contact.send');
 });
+
+
+Route::get('member/vince_ong', function() {
+    return view('members/vince_ong');
+});
