@@ -20,7 +20,7 @@
 <body>
     <div class="member_bg lexend">
         <div class="flex justify-center h-full">
-            <div class="w-[640px] h-96 mx-auto">
+            <div class="w-[640px] mx-auto relative">
                 <div class="relative">
                     <div class="p-3 absolute top-0 left-0">
                         <img src="{{ asset('images/apollo-icon.png') }}" alt="" class="w-10">
@@ -150,8 +150,40 @@
                     </div>
 
                 </div>
+
+
+                <div class="fixed bottom-0 left-0 right-0 pb-5 flex justify-center">
+                    <button id="save-btn" class="px-20 py-3 font-bold rounded-xl bg-yellow-300 text-slate-800">Save Contact</button>
+                </div>
+
             </div>
         </div>
     </div>
+
+
+
+<script>
+    var saveBtn = document.getElementById("save-btn");
+    saveBtn.addEventListener("click", function () {
+    // Get the contact information from the website
+    var contact = {
+        name: "Vince",
+        phone: "+639175590186",
+        email: "apollocreativesmain@gmail.com"
+    };
+    // create a vcard file
+    var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nEND:VCARD";
+    var blob = new Blob([vcard], { type: "text/vcard" });
+    var url = URL.createObjectURL(blob);
+    
+    const newLink = document.createElement('a');
+    newLink.download = contact.name + ".vcf";
+    newLink.textContent = contact.name;
+    newLink.href = url;
+    
+    newLink.click();
+    });
+</script>
+    
 </body>
 </html>
