@@ -25,12 +25,12 @@
                     <div class="p-3 absolute top-0 left-0">
                         <img src="{{ asset('images/apollo-icon.png') }}" alt="" class="w-10">
                     </div>
-                    <img src="{{ asset('images/members/vince.png') }}" alt="">
+                    <img src="{{ asset('images/members/arjen.png') }}" alt="">
                     <div class="absolute bottom-0 left-0 right-0 pb-20">
                         <div class="flex justify-center">
-                            <div class="p-5 text-center">
-                                <h1 class="text-8xl yeseva">Vince</h1>
-                                <h2 class="text-base text-slate-400">Chief Executive Officer</h2>
+                            <div class="p-5 text-center flex flex-col space-y-4">
+                                <h1 class="text-8xl yeseva">Ar-Jen</h1>
+                                <h2 class="text-base text-slate-400">Chief Operations Officer</h2>
                             </div>
                         </div>
                     </div>

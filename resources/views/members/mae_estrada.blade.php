@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;400&family=Yeseva+One&display=swap" rel="stylesheet">
-    <title>Apollo Creatives Ph | Vince Ong</title>
+    <title>Apollo Creatives Ph | Mae Estrada</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
     <style>
         html, body {
@@ -25,12 +25,12 @@
                     <div class="p-3 absolute top-0 left-0">
                         <img src="{{ asset('images/apollo-icon.png') }}" alt="" class="w-10">
                     </div>
-                    <img src="{{ asset('images/members/vince.png') }}" alt="">
+                    <img src="{{ asset('images/members/mae.png') }}" alt="">
                     <div class="absolute bottom-0 left-0 right-0 pb-20">
                         <div class="flex justify-center">
-                            <div class="p-5 text-center">
-                                <h1 class="text-8xl yeseva">Vince</h1>
-                                <h2 class="text-base text-slate-400">Chief Executive Officer</h2>
+                            <div class="p-5 text-center flex flex-col space-y-4">
+                                <h1 class="text-8xl yeseva">Mae</h1>
+                                <h2 class="text-base text-slate-400">Chief Technology Officer</h2>
                             </div>
                         </div>
                     </div>

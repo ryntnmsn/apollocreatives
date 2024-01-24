@@ -30,6 +30,26 @@ Route::controller(ContactController::class)->group(function () {
 });
 
 
+Route::get('member/arjen_manlapig', function() {
+    return view('members/arjen_manlapig');
+});
+
+Route::get('member/mae_estrada', function() {
+    return view('members/mae_estrada');
+});
+
+Route::get('member/elisha_julian', function() {
+    return view('members/elisha_julian');
+});
+
+Route::get('member/thate_maristela', function() {
+    return view('members/thate_maristela');
+});
+
+Route::get('member/ryan_tinamisan', function() {
+    return view('members/ryan_tinamisan');
+});
+
 Route::get('member/vince_ong', function() {
     return view('members/vince_ong');
 });
