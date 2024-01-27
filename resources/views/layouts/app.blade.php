@@ -56,6 +56,14 @@
             }).mount()
         });
     </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6GWG2Q4ZH"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-C6GWG2Q4ZH');
+    </script>
     @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
 <body class="bg-slate-50 dark:bg-slate-900">
