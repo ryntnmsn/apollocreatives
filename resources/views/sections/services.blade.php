@@ -27,7 +27,7 @@
                     <div class="flex space-x-4 mb-4 w-full">
                         <div class="flex-none">
                             @if($service->image != null)
-                                <img src="{{ asset('storage/app/public' . $service->image) }}" alt="{{ $service->name }}" class="w-12 h-12 rounded-lg" loading="lazy">
+                                <img src="{{ asset('storage/app/public/' . $service->image) }}" alt="{{ $service->name }}" class="w-12 h-12 rounded-lg" loading="lazy">
                             @else
                                 <img src="{{ asset('images/apollo_default.jpg') }}" alt="{{ $service->name }}" class="w-12 h-12 rounded-lg" loading="lazy">
                             @endif

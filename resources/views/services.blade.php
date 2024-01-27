@@ -20,7 +20,7 @@
                         <a href="{{ route('services.show', $service->slug) }}">
                             <div class="flex space-x-4 mb-4 w-full">
                                 <div class="flex-none">
-                                    <img src="{{ asset('storage/app/public' . $service->image) }}" alt="{{ $service->name }}" class="w-12 h-12 rounded-lg" loading="lazy">
+                                    <img src="{{ asset('storage/app/public/' . $service->image) }}" alt="{{ $service->name }}" class="w-12 h-12 rounded-lg" loading="lazy">
                                 </div>
                                 <div class="flex-auto">
                                     <x-title class="mb-0 text-lg group-hover:text-slate-900">{{ $service->name }}</x-title>
