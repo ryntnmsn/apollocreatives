@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
 
             //Services
             view()->share('servicesList',
-            Service::where('is_visible', '1')->get());
+            Service::where('is_visible', '1')->with('subservices')->get());
         }
 
 

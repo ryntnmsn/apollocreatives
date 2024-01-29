@@ -67,6 +67,27 @@ html, body {
     }
   }
 
+
+.tab {
+  overflow: hidden;
+}
+
+.tab button.active {
+  background-color: rgb(250 202 21);
+  color:rgb(15 23 42);
+  font-weight: 600;
+}
+
+
+.tabContents div.active {
+  display: block!important;
+}
+
+.tabContent {
+  display: none;
+}
+
+
 /* .splide .splide__arrow {
     top: 0;
     bottom: 0;
@@ -87,6 +108,8 @@ html, body {
 .splide__arrow.splide__arrow--next {
     right: 0;
 } */
+
+
 
 
 

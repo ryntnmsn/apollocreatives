@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Apollo Creatives PH | Works')
+@section('title', 'Apollo Creatives PH | Services')
 
 @section('pageTitle')
     <x-page-title class="text-5xl">{{ $service->name }}</x-page-title>
@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div class="mb-56">
+        <div class="mb-40">
             @if($service->subservices->count() != null)
                 <div class="flex">
                     <div class="flex-1">
@@ -46,18 +46,18 @@
                 <div class="flex">
                     <div class="flex-1">
                         @forelse ($service->subservices as $subservice)
-                            <div class="mb-10 bg-slate-100 dark:bg-slate-200/[.03] px-10 py-10 border border-slate-200/[.05] rounded-xl">
+                            <div class="hover:cursor-default group hover:scale-[1.1] duration-200 ease-in-out mb-10 bg-slate-100 dark:bg-slate-200/[.03] px-10 py-10 border border-slate-200/[.05] rounded-xl dark:hover:bg-yellow-300 hover:bg-yellow-300 group:hover:">
                                 <div class="flex items-center space-x-3 mb-2">
                                     <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 bg-yellow-300 dark:bg-transparent text-slate-50 rounded-full p-1 dark:text-yellow-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 group-hover:text-slate-900 bg-yellow-300 dark:bg-transparent text-slate-50 rounded-full p-1 dark:text-yellow-300">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                                         </svg>
                                     </span>
                                     <span>
-                                        <x-title class="text-xl font-medium">{{ $subservice->name }}</x-title>
+                                        <x-title class="text-xl font-medium group-hover:text-slate-900">{{ $subservice->name }}</x-title>
                                     </span>
                                 </div>
-                                <x-paragraph>{{ $subservice->description }}</x-paragraph>
+                                <x-paragraph class="group-hover:text-slate-900">{{ $subservice->description }}</x-paragraph>
                             </div>
                         @empty
                         @endforelse
@@ -66,13 +66,41 @@
             @endif
         </div>
 
-        <div class="mt-20">
-            <div class="flex md:flex-row flex-col">
-                @include('plans.starter')
-                @include('plans.standard')
-                @include('plans.enterprise')
+
+
+        <div class="wrapper w-full flex flex-col justify-center mb-20">
+            <div class="tab flex w-full max-w-[260px] mx-auto border-4 rounded-full border-slate-800">
+                <button class="active tabButton flex-1 text-center block rounded-full w-full py-4 text-lg" data-id="basic">Basic</button>
+                <button class="tabButton flex-1 text-center block rounded-full w-full py-4 text-lg" data-id="premium">Premium</button>
+            </div>
+            <div class="tabContents mt-20 w-full">
+                <div id="basic" class="active tabContent">
+                    <div class="packageWrap">
+                        <h3 class="w-full text-center text-4xl text-slate-100 pb-10">Basic Package</h3>
+                        <div>
+                            <div class="flex md:flex-row flex-col">
+                                @include('event-plans.global')
+                                @include('event-plans.planetary')
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="premium" class="tabContent">
+                    <div class="packageWrap">
+                        <h3 class="w-full text-center text-4xl text-slate-100 pb-10">Premium Package</h3>
+                        <div>
+                            <div class="flex md:flex-row flex-col">
+                                @include('event-plans.stellar')
+                                @include('event-plans.universal')
+                                @include('event-plans.galactic')
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        
     </div>
 
 
@@ -134,7 +162,6 @@
                 </div>
                 </form>
             </div>
-        
         </div>
     </div>
 </div>

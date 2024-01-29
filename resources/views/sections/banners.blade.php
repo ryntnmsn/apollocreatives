@@ -1,4 +1,4 @@
-<div id="banners" class="splide pb-20">
+<div id="banners" class="splide pb-20 pt-10">
     <div class="splide__track">
           <ul class="splide__list">
             @foreach ($banners as $banner)
@@ -8,7 +8,6 @@
                     background-position:center;
                     background-size:cover
                 ">
-
             </li>
             @endforeach
              

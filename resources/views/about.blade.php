@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Apollo Creatives PH | Works')
+@section('title', 'Apollo Creatives PH | About Us')
 
 @section('pageTitle')
     <x-page-title>Your Dream is Our Dream Too</x-page-title>
