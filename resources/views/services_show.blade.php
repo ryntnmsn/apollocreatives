@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="flex items-center gap-2 text-slate-800 dark:text-slate-100 group-hover:text-slate-900 dark:group-hover:text-slate-900">
                                     
-                                    <x-title class="!text-3xl">
+                                    <x-title class="!text-3xl group-hover:text-slate-900 dark:group-hover:text-slate-900">
                                         <span>₱</span>{{ number_format($subservice->price) }}
                                     </x-title>
                                 </div>
