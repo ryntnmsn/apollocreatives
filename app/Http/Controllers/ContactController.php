@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SubService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -15,11 +16,16 @@ class ContactController extends Controller
 
         if($this->isOnline()) {
             $services = array_filter($request->services);
+            $sub_services = array_filter($request->sub_services);
 
             $merged = [];
             
-            foreach($services as $key => $value) {
-                $merged[] = $value;
+            foreach($services as $key => $service) {
+                $merged[] = $service;
+            }
+
+            foreach($sub_services as $key => $sub_service) {
+                $merged[] = $sub_service;
             }
 
             $mail_data = [
@@ -28,6 +34,11 @@ class ContactController extends Controller
                 'fromName' => $request->name,
                 'subject' => $request->subject,
                 'services' => $merged,
+                'email' => $request->email,
+                'contact' => $request->contact,
+                'date' => $request->date,
+                'time' => $request->time,
+                'sub_services' => $merged,
                 'body' => $request->message,
             ];
 

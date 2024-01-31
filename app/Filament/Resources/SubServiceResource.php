@@ -17,6 +17,8 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Support\Markdown;
 use Filament\Tables;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -43,6 +45,7 @@ class SubServiceResource extends Resource
                                     ->required(),
                                 MarkdownEditor::make('description')
                                     ->required(),
+                                TextInput::make('price'),
                                 Select::make('service_id')
                                     ->label('Service')
                                     ->options(Service::all()->pluck('name', 'id'))
@@ -58,7 +61,10 @@ class SubServiceResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                TextColumn::make('price'),
+                IconColumn::make('is_visible')->boolean()
+                    ->label('Status')
             ])
             ->filters([
                 //

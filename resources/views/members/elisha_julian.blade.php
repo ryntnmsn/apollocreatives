@@ -151,9 +151,9 @@
                 </div>
 
 
-                {{-- <div class="fixed bottom-0 left-0 right-0 pb-5 flex justify-center">
+                <div class="fixed bottom-0 left-0 right-0 pb-5 flex justify-center">
                     <button id="save-btn" class="px-20 py-3 font-bold rounded-xl bg-yellow-300 text-slate-800">Save Contact</button>
-                </div> --}}
+                </div>
 
             </div>
         </div>

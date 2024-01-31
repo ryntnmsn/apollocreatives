@@ -10,7 +10,7 @@ class SubService extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'description', 'service_id', 'is_visible'
+        'name', 'description', 'service_id', 'is_visible', 'price'
     ];
 
     public function service() {
