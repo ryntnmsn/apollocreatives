@@ -24,6 +24,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\RichEditor;
 
 use function Laravel\Prompts\select;
 
@@ -53,7 +54,7 @@ class CompanyResource extends Resource
                                 TextInput::make('slug')
                                     ->required()
                                     ->maxLength(255),
-                                MarkdownEditor::make('description'),
+                                RichEditor::make('description'),
 
                                 Select::make('works')
                                     ->relationship('works', 'name')

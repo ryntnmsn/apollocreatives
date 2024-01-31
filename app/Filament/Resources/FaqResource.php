@@ -19,6 +19,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\RichEditor;
 
 class FaqResource extends Resource
 {
@@ -38,7 +39,7 @@ class FaqResource extends Resource
                             ->schema([
                                 TextInput::make('name')
                                     ->required(),
-                                MarkdownEditor::make('description')
+                                RichEditor::make('description')
                                     ->required(),
                                 Toggle::make('is_visible')
                                     ->label('Status')

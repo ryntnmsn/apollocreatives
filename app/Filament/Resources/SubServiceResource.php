@@ -22,6 +22,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\RichEditor;
 
 class SubServiceResource extends Resource
 {
@@ -43,7 +44,7 @@ class SubServiceResource extends Resource
                             ->schema([
                                 TextInput::make('name')
                                     ->required(),
-                                MarkdownEditor::make('description')
+                                RichEditor::make('description')
                                     ->required(),
                                 TextInput::make('price'),
                                 Select::make('service_id')

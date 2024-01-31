@@ -20,6 +20,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\RichEditor;
 
 class TeamResource extends Resource
 {
@@ -40,7 +41,7 @@ class TeamResource extends Resource
                                 TextInput::make('name')
                                     ->required(),
                                 TextInput::make('position'),
-                                MarkdownEditor::make('description'),
+                                RichEditor::make('description'),
                                 Toggle::make('is_visible'),
                                 FileUpload::make('image')
                             ])

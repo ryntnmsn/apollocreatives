@@ -22,6 +22,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\RichEditor;
 
 class ServiceResource extends Resource
 {
@@ -51,7 +52,7 @@ class ServiceResource extends Resource
                                 TextInput::make('slug')
                                     ->required()
                                     ->maxLength(255),
-                                MarkdownEditor::make('description'),
+                                RichEditor::make('description'),
                                 MarkdownEditor::make('short_description'),
                                 Toggle::make('is_visible')
                                     ->label('Status')

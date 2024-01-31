@@ -20,6 +20,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\RichEditor;
 
 class WorkResource extends Resource
 {
@@ -39,7 +40,7 @@ class WorkResource extends Resource
                             ->schema([
                                 TextInput::make('name')
                                     ->required(),
-                                MarkdownEditor::make('description'),
+                                RichEditor::make('description'),
                                 Toggle::make('is_visible')
                                     ->label('Status')
                                     ->helperText('Work visibility status'),

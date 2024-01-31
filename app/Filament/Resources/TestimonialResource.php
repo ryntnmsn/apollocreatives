@@ -21,6 +21,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\RichEditor;
 
 class TestimonialResource extends Resource
 {
@@ -42,7 +43,7 @@ class TestimonialResource extends Resource
                                 TextInput::make('name')
                                     ->columnSpanFull()
                                     ->required(),
-                                MarkdownEditor::make('description')
+                                RichEditor::make('description')
                                     ->columnSpanFull(),
                                 TextInput::make('company'),
                                 TextInput::make('position'),

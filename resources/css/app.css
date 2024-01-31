@@ -11,7 +11,7 @@ html, body {
     color:rgb(226 232 240);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-size:16px
+    font-size:18px
 }
 
 .member_bg {
@@ -87,6 +87,10 @@ html, body {
   display: none;
 }
 
+h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
 
 /* .splide .splide__arrow {
     top: 0;

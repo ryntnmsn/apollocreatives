@@ -19,8 +19,8 @@
         <div class="mb-20">
             <div class="w-full">
                 <div class="flex md:flex-row flex-col">
-                    <div class="flex-1 text-left pe-0 md:pe-20">
-                        <x-paragraph class="flex items-center h-full">{{ $service->description }}</x-paragraph>
+                    <div class="flex-1 items-center text-left pe-0 md:pe-20 dark:text-slate-100 text-slate-800">
+                        {!! $service->description !!}
                     </div>
                     <div class="flex-none">
                         <div class="flex justify-center items-center h-full" style="background-image: url('{{ asset('images/astronaut_bg.png') }}'); background-size:contain; background-repeat:no-repeat; background-position:center">
@@ -36,7 +36,7 @@
             @if($service->subservices->count() != null)
                 <div class="flex">
                     <div class="flex-1">
-                        <x-title class="text-2xl underline decoration-yellow-300 decoration-[7px] underline-offset-8 mb-10">Services Offered</x-title>
+                        <x-title class="text-2xl underline decoration-yellow-300 decoration-[7px] underline-offset-8 mb-10">Services/Packages we offer</x-title>
                     </div>
                     <div class="flex-none">
                         <x-button data-modal-target="{{ $service->slug }}" data-modal-toggle="{{ $service->slug }}">Select this mission</x-button>
