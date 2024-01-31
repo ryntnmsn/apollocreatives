@@ -165,7 +165,7 @@
                                 </div> --}}
 
                                 
-                                    <h2 id="accordion-open-heading-{{$servicememu->id}}">
+                                    <h3 id="accordion-open-heading-{{$servicememu->id}}">
                                         <button type="button" class="bg-slate-50 flex justify-between items-center w-full p-5 font-medium text-slate-800 border border-b-0 border-slate-200 gap-3 dark:bg-slate-50 dark:focus:text-slate-800 dark:focus:bg-slate-50" data-accordion-target="#accordion-open-body-{{$servicememu->id}}" aria-expanded="@if($service->slug == $servicememu->slug) true @else false @endif" aria-controls="accordion-open-body-{{$servicememu->id}}">
                                             <div class="flex justify-start space-x-2">
                                                 <input @if($servicememu->id == $service->id) checked @endif id="services-{{ $servicememu->id }}" type="checkbox" value="{{ $servicememu->name }}" name="services[]" class="w-5 h-5 text-yellow-300 bg-slate-100 border-slate-300 rounded focus:ring-yellow-300 focus:ring-2">
@@ -177,7 +177,7 @@
                                                 </svg>
                                             </div>
                                         </button>
-                                    </h2>
+                                    </h3>
                                     <div id="accordion-open-body-{{$servicememu->id}}" class="@if($service->slug != $servicememu->slug) hidden @endif" aria-labelledby="accordion-open-heading-{{$servicememu->id}}">
                                         <div class="p-5 border border-b-0 border-slate-200">
                                             <div class="flex flex-col ps-5 space-y-2">
