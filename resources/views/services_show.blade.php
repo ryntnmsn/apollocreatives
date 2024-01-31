@@ -57,7 +57,7 @@
                                             <x-title class="text-xl font-medium group-hover:text-slate-900">{{ $subservice->name }}</x-title>
                                         </span>
                                     </div>
-                                    <x-paragraph class="group-hover:text-slate-900">{{ $subservice->description }}</x-paragraph>
+                                    <x-paragraph class="group-hover:text-slate-900">{!! $subservice->description !!}</x-paragraph>
                                 </div>
                                 <div class="flex items-center gap-2 group-hover:text-slate-900">
                                     <span class="text-slate-900 dark:text-slate-100">
