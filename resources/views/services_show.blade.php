@@ -19,7 +19,7 @@
         <div class="mb-20">
             <div class="w-full">
                 <div class="flex md:flex-row flex-col">
-                    <div class="flex-1 items-center text-left pe-0 md:pe-20 dark:text-slate-100 text-slate-800">
+                    <div class="list_style flex-1 items-center text-left pe-0 md:pe-20 dark:text-slate-100 text-slate-800">
                         {!! $service->description !!}
                     </div>
                     <div class="flex-none">
@@ -57,14 +57,14 @@
                                             <x-title class="text-xl font-medium group-hover:text-slate-900">{{ $subservice->name }}</x-title>
                                         </span>
                                     </div>
-                                    <x-paragraph class="group-hover:text-slate-900">{!! $subservice->description !!}</x-paragraph>
+                                    <div class="list_style text-slate-900 dark:text-slate-400 dark:group-hover:group-hover:text-slate-900 group-hover:text-slate-900">
+                                        <x-paragraph>{!! $subservice->description !!}</x-paragraph>
+                                    </div>
                                 </div>
-                                <div class="flex items-center gap-2 group-hover:text-slate-900">
-                                    <span class="text-slate-900 dark:text-slate-100">
-                                        Php
-                                    </span>
-                                    <x-title class="!text-3xl group-hover:text-slate-900">
-                                        {{ number_format($subservice->price) }}
+                                <div class="flex items-center gap-2 text-slate-800 dark:text-slate-100 group-hover:text-slate-900 dark:group-hover:text-slate-900">
+                                    
+                                    <x-title class="!text-3xl">
+                                        <span>₱</span>{{ number_format($subservice->price) }}
                                     </x-title>
                                 </div>
                             </div>

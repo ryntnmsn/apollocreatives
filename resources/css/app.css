@@ -39,6 +39,10 @@ html, body {
     animation: imageMove 5s ease infinite;
 }
 
+.list_style ul {
+  list-style: square;
+}
+
 @keyframes shadowScale {
     0% {
       transform: scale(.5);
