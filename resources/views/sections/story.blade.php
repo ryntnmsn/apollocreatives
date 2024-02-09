@@ -3,8 +3,7 @@
         <div class="flex-1 text-left pe-0 md:pe-10">
             <x-title class="text-5xl md:text-6xl mb-5">Our Story</x-title>
             <x-paragraph class="pb-5">
-                Our team of six is centered on innovation, with each member possesses the ability to operate effectively in multiple capacities, bringing with them a wealth of knowledge and unwavering commitment to ensure the delivery of exceptional outcomes. Our team of six is centered on innovation, with each member possesses the ability to operate effectively in multiple capacities, bringing with them a wealth 
-            </x-paragraph>
+                Our marketing agency was founded with the vision of providing ease of use and high quality materials to our clients. We believe in giving value to creative individuals and understand the importance of their contributions. <br><br>Our mission is to help advertise and support small or starting business owners, ensuring their success in the competitive market. We pride ourselves on our dedication to delivering effective marketing strategies and excellent customer service, ultimately helping business owners achieve their goals and thrive.            </x-paragraph>
             <form action="{{ route('about.index') }}" class="{{ request()->is('about-us') ? 'hidden' : '' }}">
                 <x-button type="submit">Read more</x-button>
             </form>
