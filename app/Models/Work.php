@@ -10,11 +10,15 @@ class Work extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'description', 'is_visible', 'image'
+        'name','service_id', 'description', 'is_visible', 'image'
     ];
 
     public function companies() {
         return $this->belongsToMany(Company::class, 'company_work');
+    }
+
+    public function service() {
+        return $this->belongsTo(Service::class);
     }
 
 }

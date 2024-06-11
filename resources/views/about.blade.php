@@ -15,7 +15,8 @@
                     <div class="flex-1">
                         <x-title class="text-4xl underline decoration-yellow-300 underline-offset-[10px] decoration-[6px] mb-5">Mission</x-title>
                         <x-paragraph>
-                            Apollo Inc. is dedicated to meeting the branding needs of organizations through high-quality, functional collaterals and digital services. We devote our expertise, originality, and experience to them in order to assist them in achieving their brand objectives.                        </x-paragraph>
+                            Apollo Inc. is dedicated to meeting the branding needs of organizations through high-quality, functional collaterals and digital services. We devote our expertise, originality, and experience to them in order to assist them in achieving their brand objectives.
+                        </x-paragraph>
                     </div>
                     <div class="flex-1">
                         <x-title class="text-4xl underline decoration-yellow-300 underline-offset-[10px] decoration-[6px] mb-5">Goal</x-title>

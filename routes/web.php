@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,9 @@ Route::controller(ContactController::class)->group(function () {
     Route::post('/send', 'send')->name('contact.send');
 });
 
+Route::controller(WorkController::class)->group(function () {
+    Route::get('films', 'filmWorks')->name('filmWorks');
+});
 
 Route::get('member/arjen_manlapig', function() {
     return view('members/arjen_manlapig');

@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\WorkResource\Pages;
 use App\Filament\Resources\WorkResource\RelationManagers;
 use App\Models\Work;
+use App\Models\Service;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Group;
@@ -21,6 +22,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 
 class WorkResource extends Resource
 {
@@ -41,6 +43,10 @@ class WorkResource extends Resource
                                 TextInput::make('name')
                                     ->required(),
                                 RichEditor::make('description'),
+                                Select::make('service_id')
+                                    ->label('Service')
+                                    ->options(Service::all()->pluck('name', 'id'))
+                                    ->searchable(),
                                 Toggle::make('is_visible')
                                     ->label('Status')
                                     ->helperText('Work visibility status'),
