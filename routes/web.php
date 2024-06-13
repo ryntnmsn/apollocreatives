@@ -32,6 +32,7 @@ Route::controller(ContactController::class)->group(function () {
 
 Route::controller(WorkController::class)->group(function () {
     Route::get('films', 'filmWorks')->name('filmWorks');
+    Route::get('events', 'eventsWorks')->name('eventsWorks');
 });
 
 Route::get('member/arjen_manlapig', function() {

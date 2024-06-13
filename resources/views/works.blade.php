@@ -22,8 +22,8 @@
                 </a>
             </div>
             <div class="relative overflow-hidden bg-yellow-300 dark:bg-slate-800 cursor-pointer rounded-xl flex justify-center items-center py-36 border-yellow-300 group">
-                <a href="">
-                    <x-title class="text-4xl text-slate-900 dark:text-yellow-300 z-20 group-hover:hidden">Video Editing</x-title>
+                <a href="{{ route('eventsWorks') }}">
+                    <x-title class="text-4xl text-slate-900 dark:text-yellow-300 z-20 group-hover:hidden">Events</x-title>
                     <div class="absolute top-0 left-0 right-0 bottom-0 bg-no-repeat bg-cover bg-center z-0 grayscale opacity-[.02] group-hover:opacity-[1] group-hover:grayscale-0" style=""></div>
                 </a>
             </div>

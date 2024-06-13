@@ -9,4 +9,10 @@ class WorkController extends Controller
     public function filmWorks() {
         return view('film_works');
     }
+
+    public function eventsWorks() {
+        return view('events');
+    }
+
+    
 }

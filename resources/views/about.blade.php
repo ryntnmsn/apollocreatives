@@ -42,7 +42,7 @@
                         <div class=" pt-16 hover:-translate-y-2 duration-200 ease-in-out">
                             <div class="group cursor-default relative w-full border border-slate-200/[.10] hover:shadow-2xl bg-slate-100 dark:bg-slate-200/[.03] rounded-2xl dark:hover:bg-yellow-300 hover:bg-yellow-300 duration-200 ease-in-out px-6 pb-6">
                                 <div class="w-full -mt-16 flex justify-center pb-6">
-                                    <img src="{{ asset('storage/' . $member->image) }}" class="w-32 h-32 duration-200 ease-in-out rounded-full p-3 border border-slate-200 dark:border-slate-200/[.10] bg-slate-50 dark:bg-slate-900">
+                                    <img src="{{ asset('storage/' . $member->image) }}" class="grayscale w-32 h-32 duration-200 ease-in-out rounded-full p-3 border border-slate-200 dark:border-slate-200/[.10] bg-slate-50 dark:bg-slate-900">
                                 </div>
                                 <x-title class="text-lg group-hover:text-slate-900">{{ $member->name }}</x-title>
                                 <x-paragraph class="pb-4 group-hover:text-slate-900">{{ $member->position }}</x-paragraph>
