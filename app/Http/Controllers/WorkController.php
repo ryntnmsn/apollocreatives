@@ -14,5 +14,13 @@ class WorkController extends Controller
         return view('events');
     }
 
+    public function animationWorks() {
+        return view('animations');
+    }
+
+    public function docuWorks() {
+        return view('documentaries');
+    }
+
     
 }

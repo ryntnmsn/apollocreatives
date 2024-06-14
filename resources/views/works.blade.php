@@ -16,7 +16,7 @@
                 </a>
             </div>
             <div class="relative overflow-hidden bg-yellow-300 dark:bg-slate-800 cursor-pointer rounded-xl flex justify-center items-center py-36 border-yellow-300 group">
-                <a href="">
+                <a href="{{ route('animationWorks') }}">
                     <x-title class="text-4xl text-slate-900 dark:text-yellow-300 z-20 group-hover:hidden">Animation</x-title>
                     <div class="absolute top-0 left-0 right-0 bottom-0 bg-no-repeat bg-cover bg-center z-0 grayscale opacity-[.02] group-hover:opacity-[1] group-hover:grayscale-0" style=""></div>
                 </a>
@@ -28,8 +28,8 @@
                 </a>
             </div>
             <div class="relative overflow-hidden bg-yellow-300 dark:bg-slate-800 cursor-pointer rounded-xl flex justify-center items-center py-36 border-yellow-300 group">
-                <a href="">
-                    <x-title class="text-4xl text-slate-900 dark:text-yellow-300 z-20 group-hover:hidden">3D Animations</x-title>
+                <a href="{{ route('docuWorks') }}">
+                    <x-title class="text-4xl text-slate-900 dark:text-yellow-300 z-20 group-hover:hidden">Documentaries</x-title>
                     <div class="absolute top-0 left-0 right-0 bottom-0 bg-no-repeat bg-cover bg-center z-0 grayscale opacity-[.02] group-hover:opacity-[1] group-hover:grayscale-0" style=""></div>
                 </a>
             </div>
@@ -38,10 +38,17 @@
         @if($companies->count() != null)
         <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pb-20">
             @foreach ($companies as $company)
-                <div class="relative overflow-hidden bg-yellow-300 dark:bg-slate-800 cursor-pointer rounded-xl flex justify-center items-center py-36 border-yellow-300 group">
-                    <a href="{{ route('works.show', $company->slug) }}">
-                        <x-title class="text-4xl text-slate-900 dark:text-yellow-300 z-20 group-hover:hidden">{{ $company->name }}</x-title>
-                        <div class="absolute top-0 left-0 right-0 bottom-0 bg-no-repeat bg-cover bg-center z-0 grayscale opacity-[.02] group-hover:opacity-[1] group-hover:grayscale-0" style="background-image:url('{{ asset('storage/' . $company->image) }}') "></div>
+                <div class="relative overflow-hidden duration-300 ease-in-out hover:scale-[1.1] bg-yellow-300 dark:bg-slate-800 cursor-pointer rounded-xl flex justify-center items-center py-36 border-yellow-300 group">
+                    <a class="absolute top-0 left-0 right-0 bottom-0 group" href="{{ route('works.show', $company->slug) }}">
+
+                        <div class="opacity-0 group-hover:opacity-1 z-1 absolute top-0 left-0 right-0 bottom-0 ">
+                            <div>{{ $company->name }}</div>
+                        </div>
+
+                        <div class="bg-no-repeat bg-cover bg-center flex w-full h-full" style="background-image:url('{{ asset('storage/' . $company->image) }}')"></div>
+
+                        {{-- <div class="absolute top-0 left-0 right-0 bottom-0 bg-no-repeat bg-cover bg-center z-0 grayscale opacity-[.02] group-hover:opacity-[1] group-hover:grayscale-0" style="background-image:url('{{ asset('storage/' . $company->image) }}') "></div>
+                        <x-title class="text-4xl text-slate-900 dark:text-yellow-300 z-20">{{ $company->name }}</x-title> --}}
                     </a>
                 </div>
             @endforeach
